@@ -10,10 +10,8 @@
     "dev": "nodemon --exec ts-node --require dotenv/config --files src/index.ts",
     "build": "tsc --build . && cpx \"./src/templates/*\" ./dist/src/templates --clean",
     "start": "node --require dotenv/config dist/src/index.js",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
-  },
-  "prisma": {
-    "seed": "ts-node ./prisma/seed.ts"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "node --test --require ts-node/register src/test/**.ts"
   },
   "dependencies": {
     "@types/pg": "^8.10.7",
